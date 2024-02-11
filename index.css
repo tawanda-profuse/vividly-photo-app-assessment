@@ -1,12 +1,81 @@
-@font-face {
-    font-family: "Golos-Text-Small";
-    src: url("/Golos Text/Golos Text-normal-500-100.ttf");
+/* @font-face {
+    font-family: Golos-Text-Small;
+    src: url("/Golos Text/Golos Text-normal-500-100.ttf") format("truetype");
 }
+
 @font-face {
-    font-family: "Golos-Text-Medium";
-    src: url("/Golos Text/Golos Text-normal-600-100.ttf");
+    font-family: Golos-Text-Medium;
+    src: url("/Golos Text/Golos Text-normal-600-100.ttf") format("truetype")
+} */
+
+@font-face {
+    font-family: Golos-Text-Large;
+    src: url("/Golos Text/Golos Text-normal-700-100.ttf") format("truetype");
 }
-@font-face {
-    font-family: "Golos-Text-Large";
-    src: url("/Golos Text/Golos Text-normal-700-100.ttf");
+
+:root {
+    --vividly-dark: #494949;
+    --vividly-gray: #bcbcbc;
+    --vividly-light: #ffffff;
+    --vividly-pale: #eeeeee;
+    --vividly-purple: #6658ea;
+    --vividly-purple-dark: #2b3595;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--vividly-pale);
+    height: 15vh;
+    padding: 0.2rem 0.5rem;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    align-items: center;
+    padding: 0 0.5rem;
+    color: var(--vividly-dark);
+}
+
+.nav-buttons button{
+    outline: none;
+    border: none;
+    border-radius: 0.2rem;
+    background-color: var(--vividly-purple);
+    padding: 0.5rem;
+    color: var(--vividly-light);
+    cursor: pointer;
+    font-size: 0.7rem;
+}
+
+.nav-buttons i{
+    cursor: pointer;
+}
+
+.avatar {
+    border-radius: 50%;
+    border: 0.2rem solid var(--vividly-dark);
+    background-image: url(/images/my_face.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1.2rem;
+    cursor: pointer;
+}
+
+svg {
+    width: 20%;
+}
+
+svg path {
+    fill: black;
 }
