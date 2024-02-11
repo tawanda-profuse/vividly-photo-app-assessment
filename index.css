@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "Golos-Text-Small";
+    src: url("/Golos Text/Golos Text-normal-500-100.ttf");
+}
+@font-face {
+    font-family: "Golos-Text-Medium";
+    src: url("/Golos Text/Golos Text-normal-600-100.ttf");
+}
+@font-face {
+    font-family: "Golos-Text-Large";
+    src: url("/Golos Text/Golos Text-normal-700-100.ttf");
+}
