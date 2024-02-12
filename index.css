@@ -279,21 +279,73 @@ dialog button {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 1rem 0;
 }
 
-dialog img {
+#user img {
     border-radius: 50%;
     background-color: var(--vividly-light);
-    width: 30%;
+    width: 25%;
     animation: appear 1s linear 0s infinite alternate;
+}
+
+#callAi{
+    position: fixed;
+    bottom: 5%;
+    left: 30%;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    background-color: var(--vividly-purple);
+    color: var(--vividly-light);
+    font-size: 2rem;
+    z-index: 10;
+    cursor: pointer;
+    box-shadow: 0 0 2rem 0.1rem var(--vividly-purple-dark);
+    transition: 0.2s ease all;
+}
+#agi img {
+    border-radius: 50%;
+    background-color: var(--vividly-light);
+    width: 20%;
+    /* animation: appear 1s linear 0s infinite alternate; */
+}
+#callAi:hover{
+    scale: 1.2;
+}
+
+#agi form{
+    display: flex;
+    flex-direction: column;
+}
+#agi textarea{
+    font-family: serif;
+    font-size: 1.3rem;
+    resize: none;
+    padding: 1rem;
+    margin: 1rem 0;
 }
 
 @keyframes appear {
     from{
-        scale: 0.9;
+        scale: 1;
     } 
     to {
-        scale: 1.2;
+        scale: 1.1;
+    }
+}
+
+.rotate{
+    animation: rotate 1s linear 0s infinite;
+}
+
+@keyframes rotate {
+    from{
+        rotate: 0deg;
+    } 
+    to {
+        rotate: 360deg;
     }
 }
 

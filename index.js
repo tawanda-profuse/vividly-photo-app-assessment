@@ -11,8 +11,14 @@ var leftButton = document.querySelector(".left-button");
 var aside = document.querySelector("aside");
 var undoBtn = document.getElementById("undo");
 var avatar = document.querySelector(".avatar");
-var dialog = document.querySelector("dialog");
-var dialogBtn = document.querySelector("dialog button");
+var dialog = document.getElementById("user");
+var dialogBtn = document.querySelector("#user button");
+var callAI = document.getElementById("callAi");
+var AGI = document.getElementById("agi");
+var generateBtn = document.getElementById("generate");
+var closeAI = document.getElementById("closeAI");
+var processImg = document.getElementById("process");
+var promptText = document.querySelector("#agi form textarea");
 
 let toggled = false;
 
@@ -66,45 +72,66 @@ themeButton.addEventListener("click", function () {
 
 
 let toggle = false;
-function openDrawer(){
-    if(toggle){
+function openDrawer() {
+    if (toggle) {
         toggle = false
     } else {
         toggle = true;
     }
 }
 
-leftButton.addEventListener("click", function(){
+leftButton.addEventListener("click", function () {
     openDrawer();
 
-    if(toggle){
+    if (toggle) {
         openMenu.style.display = "none";
-        if(toggled){
+        if (toggled) {
             firstSideIcon.style.backgroundColor = "var(--vividly-purple)";
-        } else{
+        } else {
             firstSideIcon.style.backgroundColor = "var(--vividly-pale)";
         }
         leftButton.innerHTML = '<i class="fas fa-chevron-right"></i>';
     } else {
         openMenu.style.display = "flex";
-        if(toggled){
+        if (toggled) {
             firstSideIcon.style.backgroundColor = "var(--vividly-purple-dark)";
-        } else{
+        } else {
             firstSideIcon.style.backgroundColor = "var(--vividly-light  )";
         }
         leftButton.innerHTML = '<i class="fas fa-chevron-left"></i>';
     }
 });
 
-avatar.addEventListener("click", function(){
+avatar.addEventListener("click", function () {
     dialog.setAttribute("open", true);
 });
 
-dialogBtn.addEventListener("click", function(){
+dialogBtn.addEventListener("click", function () {
     dialog.close();
 });
 
-undoBtn.addEventListener("click", function(){
+undoBtn.addEventListener("click", function () {
     window.location.reload();
+});
+
+callAI.addEventListener("click", function () {
+    AGI.setAttribute("open", true);
+});
+
+generateBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (promptText.value != "") {
+        processImg.classList.add("rotate");
+        setTimeout(() => {
+            alert("Image generation in progress...");
+        }, 2000);
+        setTimeout(() => {
+            AGI.close();
+        }, 3000);
+    }
+});
+
+closeAI.addEventListener("click", function () {
+    AGI.close();
 });
 

@@ -12,14 +12,6 @@
 </head>
 
 <body>
-    <dialog>
-        <div class="row">
-            <button><i class="fas fa-times"></i></button>
-            <img src="images/logo_svg.svg" alt="">
-        </div>
-        <h1>Dear User</h1>
-        <p>Thank you for using our service.</p>
-    </dialog>
     <nav class="navbar">
         <svg width="515" height="163" viewBox="0 0 515 163" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -114,6 +106,25 @@
         </div>
     </nav>
     <main>
+        <dialog id="user">
+            <div class="row">
+                <button><i class="fas fa-times"></i></button>
+                <img src="images/logo_svg.svg" alt="">
+            </div>
+            <h1>Dear User</h1>
+            <p>Thank you for using our service.</p>
+        </dialog>
+        <dialog id="agi">
+            <div class="row">
+                <img id="process" src="images/logo_svg.svg" alt="">
+                <button id="closeAI"><i class="fas fa-times"></i></button>
+            </div>
+            <h1>Generate Your Prompt</h1>
+            <form>
+                <textarea placeholder="What would you like to ask me?" id="prompt" rows="5"></textarea>
+                <button id="generate">Generate</button>
+            </form>
+        </dialog>
         <aside>
             <div class="side-icons">
                 <div>
@@ -287,6 +298,7 @@
                 <span><i class="fas fa-minus"></i> 100 <i class="fas fa-plus"></i></span>
                 <span><i class="fas fa-percent"></i></span>
             </div>
+            <button id="callAi"><i class="fas fa-lightbulb"></i></button>
         </section>
     </main>
     <script src="index.js"></script>
