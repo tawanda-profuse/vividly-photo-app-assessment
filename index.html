@@ -12,6 +12,14 @@
 </head>
 
 <body>
+    <dialog>
+        <div class="row">
+            <button><i class="fas fa-times"></i></button>
+            <img src="images/logo_svg.svg" alt="">
+        </div>
+        <h1>Dear User</h1>
+        <p>Thank you for using our service.</p>
+    </dialog>
     <nav class="navbar">
         <svg width="515" height="163" viewBox="0 0 515 163" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -96,16 +104,192 @@
                 d="M242.069 39.6391H256.573L232.294 105.357H217.29L193.147 39.6391H207.606L224.837 89.439L242.069 39.6391ZM271.394 51.5989C267.256 51.5989 263.801 48.2333 263.801 44.049C263.801 39.9103 267.256 36.5448 271.394 36.5448C275.44 36.5448 278.895 39.9104 278.895 44.049C278.895 48.2333 275.44 51.5989 271.394 51.5989ZM264.71 105.357V58.6034H277.895V105.357H264.71ZM334.957 39.6391H349.46L325.182 105.357H310.177L286.035 39.6391H300.493L317.725 89.439L334.957 39.6391ZM364.281 51.5989C360.144 51.5989 356.688 48.2333 356.688 44.049C356.688 39.9103 360.144 36.5448 364.281 36.5448C368.328 36.5448 371.783 39.9104 371.783 44.049C371.783 48.2333 368.328 51.5989 364.281 51.5989ZM357.598 105.357V58.6034H370.783V105.357H357.598ZM417.477 35.4988H430.572V105.357H418.159L417.841 99.263C415.158 103.857 409.521 106.449 403.155 106.449C390.834 106.449 380.649 97.3531 380.649 82.0713C380.649 66.7894 390.879 57.6934 403.155 57.6934C409.293 57.6934 414.704 60.0129 417.477 64.2429L417.477 35.4988ZM406.156 95.5791C413.112 95.5791 418.523 90.2578 418.523 82.0713C418.523 73.8848 413.067 68.5178 406.156 68.5178C399.2 68.5178 393.744 73.657 393.744 82.0713C393.744 90.4399 399.2 95.5791 406.156 95.5791ZM444.121 105.357V35.4988H457.351V105.357H444.121ZM501.499 58.6034H514.912L486.086 127.372H472.81L483.494 103.449L464.262 58.6053H478.538L489.678 89.3505L501.499 58.6034Z"
                 fill="#2B3595" />
         </svg>
-
         <div class="nav-buttons">
-            <i class="fas fa-undo"></i>
+            <i class="fas fa-undo" id="undo"></i>
             <i class="fas fa-redo"></i>
             <button><i class="fas fa-circle-plus"> New</i></button>
             <button><i class="fas fa-save"> Save or download</i></button>
-            <button><i class="fas fa-sun"> theme</i></button>
+            <button id="themeBtn"><i class="fas fa-moon"> theme</i></button>
             <div class="avatar"></div>
         </div>
     </nav>
+    <main>
+        <aside>
+            <div class="side-icons">
+                <div>
+                    <i class="fas fa-sliders"></i>
+                    <p>Adjust</p>
+                </div>
+                <div>
+                    <i class="fas fa-paintbrush"></i>
+                    <p>Brushes</p>
+                </div>
+                <div>
+                    <i class="fas fa-star"></i>
+                    <p>Brushes</p>
+                </div>
+                <div>
+                    <i class="fas fa-photo-film"></i>
+                    <p>Frames</p>
+                </div>
+                <div>
+                    <i class="fas fa-face-smile"></i>
+                    <p>icons</p>
+                </div>
+                <div>
+                    <i class="fas fa-image"></i>
+                    <p>image</p>
+                </div>
+                <div>
+                    <i class="fas fa-qrcode"></i>
+                    <p>QR Code</p>
+                </div>
+                <div>
+                    <i class="fas fa-shapes"></i>
+                    <p>shapes</p>
+                </div>
+                <div>
+                    <i class="fas fa-t"></i>
+                    <p>text</p>
+                </div>
+                <div>
+                    <i class="fas fa-pencil"></i>
+                    <p>draw</p>
+                </div>
+            </div>
+            <div class="open-menu">
+                <div class="menu-items">
+                    <div class="option">
+                        <div class="left">
+                            <i class="fas fa-crop"></i>
+                            <p>crop</p>
+                        </div>
+                        <div class="right">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <div class="left">
+                            <i class="fas fa-rotate-right"></i>
+                            <p>rotate</p>
+                        </div>
+                        <div class="right">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <div class="left">
+                            <i class="fas fa-border-top-left"></i>
+                            <p>resize</p>
+                        </div>
+                        <div class="right">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-items">
+                    <div class="option">
+                        <div class="left">
+                            <i class="fas fa-wand-magic-sparkles"></i>
+                            <p>quick filters</p>
+                        </div>
+                        <div class="right">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <div class="left">
+                            <i class="fas fa-wand-magic-sparkles"></i>
+                            <p>resize</p>
+                        </div>
+                        <div class="right">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <div class="left">
+                            <i class="fas fa-sliders"></i>
+                            <p>basic adjust</p>
+                        </div>
+                        <div class="right">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <div class="left">
+                            <i class="fas fa-sun"></i>
+                            <p>gamma</p>
+                        </div>
+                        <div class="right">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <div class="left">
+                            <i class="fas fa-palette"></i>
+                            <p>blend Color</p>
+                        </div>
+                        <div class="right">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <div class="left">
+                            <i class="fas fa-palette"></i>
+                            <p>blend Color</p>
+                        </div>
+                        <div class="right">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <div class="left">
+                            <i class="fas fa-arrows-turn-right"></i>
+                            <p>duotone effect</p>
+                        </div>
+                        <div class="right">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <div class="left">
+                            <i class="fas fa-refresh"></i>
+                            <p>swap colors</p>
+                        </div>
+                        <div class="right">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <div class="left">
+                            <i class="fas fa-sliders"></i>
+                            <p>advanced edits</p>
+                        </div>
+                        <div class="right">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <section id="content">
+            <button class="left-button">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="right-button">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <img src="images/screenshot.png" alt="Ferris wheel" draggable="">
+
+            <div class="zoom-icons">
+                <span>0px <i class="fas fa-times"></i> 0px</span>
+                <span><i class="fas fa-hand"></i></span>
+                <span><i class="fas fa-minus"></i> 100 <i class="fas fa-plus"></i></span>
+                <span><i class="fas fa-percent"></i></span>
+            </div>
+        </section>
+    </main>
+    <script src="index.js"></script>
 </body>
 
 </html>
